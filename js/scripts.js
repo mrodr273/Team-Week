@@ -26,25 +26,17 @@ function Event(title, weight, min, max, where, when, time) {
   this.time = time;
 }
 
-// function resetFields() {
-//     $("input#firstName").val("");
-//     $("input#lastName").val("");
-//     $("input#phoneNumber").val("");
-//     $("input.address-type").val("");
-//     $("input.new-street").val("");
-//     $("input.new-city").val("");
-//     $("input.new-state").val("");
-// }
+function resetFields() {
+    $("input#name").val("");
+    $("input#title").val("");
+    $("input.weight").val("");
+    $("input#min").val("");
+    $("input#max").val("");
+    $("input.where").val("");
+    $("input#when").val("");
+    $("input.time").val("");
+}
 
-// Address.prototype.fullAddress = function() {
-//   return this.street + ", " + this.city + " " + this.state;
-// }
-//
-// Contact.prototype.fullName = function() {
-//   return this.firstName + " " + this.lastName;
-// }
-
- // var newEvent = new Event(title, weight, min, max, where, when, time);
 
  var inputEvent = function(eventBook) {
    $("ul#eventDetails").text("");
@@ -93,7 +85,7 @@ console.log(eventBook);
   //   newContact.addresses.push(newAddress);
   // });
   //
-  // resetFields();
+   resetFields();
   //
   // addressBook.addContact(newContact);
   // inputContact(addressBook);
