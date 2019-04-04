@@ -11,7 +11,7 @@ function playerEventBook() {
   this.playerEvent = [];
 }
 
-var playerEventBook = new playerEventBook();
+var PlayerEventBook = new playerEventBook();
 
 
 
@@ -88,16 +88,16 @@ function resetFields() {
    };
  };
 
- var inputPlayerEvent = function(playerEventBook) {
+ var inputPlayerEvent = function(PlayerEventBook) {
    $("ul#playerDetails").text("");
-   for (var index=0; index < playerEventBook.playerEvent.length; index++) {
+   for (var index=0; index < PlayerEventBook.playerEvent.length; index++) {
      //debugger;
-     $("ul#playerDetails").append("<li> " + playerEventBook.playerEvent[index].titlePlayer + "</li>"); $("ul#eventDetails").append("<li> " + eventBook.event[index].weight + "</li>");
-     $("ul#playerDetails").append("<li> " + playerEventBook.playerEvent[index].minPlayer + "</li>");
-     $("ul#playerDetails").append("<li> " + playerEventBook.playerEvent[index].maxPlayer + "</li>");
-     $("ul#playerDetails").append("<li> " + playerEventBook.playerEvent[index].wherePlayer + "</li>");
-     $("ul#playertDetails").append("<li> " + playerEventBook.playerEvent[index].whenPlayer + "</li>");
-     $("ul#playerDetails").append("<li> " + playerEventBook.playerEvent[index].time + "</li>");
+     $("ul#playerDetails").append("<li> " + PlayerEventBook.playerEvent[index].titlePlayer + "</li>"); $("ul#eventDetails").append("<li> " + eventBook.event[index].weight + "</li>");
+     $("ul#playerDetails").append("<li> " + PlayerEventBook.playerEvent[index].minPlayer + "</li>");
+     $("ul#playerDetails").append("<li> " + PlayerEventBook.playerEvent[index].maxPlayer + "</li>");
+     $("ul#playerDetails").append("<li> " + PlayerEventBook.playerEvent[index].wherePlayer + "</li>");
+     $("ul#playertDetails").append("<li> " + PlayerEventBook.playerEvent[index].whenPlayer + "</li>");
+     $("ul#playerDetails").append("<li> " + PlayerEventBook.playerEvent[index].time + "</li>");
      // addressBook.contacts[index].addresses.forEach(function(address) {
      //   $("ul#eventDetails").append("<li>" + address.type + ": " + address.fullAddress() + "</li>");
 
@@ -106,7 +106,7 @@ function resetFields() {
  };
 
 
-//User Interface Logic -----------
+//User Interface Logic ----------
 $(document).ready(function() {
 
   $("#playerbtn").click(function(event) {
@@ -155,7 +155,7 @@ $(document).ready(function() {
 
   var newPlayerEvent = new playerEvent(PlayerTitleInput, PlayerWeightInput, PlayerMinInput, PlayerMaxInput, PlayerWhereInput, PlayerWhenInput, PlayerTimeInput);
   console.log(newPlayerEvent);
-  playerEventBook.addPlayerEvent(newPlayerEvent);
+  PlayerEventBook.addPlayerEvent(newPlayerEvent);
   console.log(playerEventBook);
   // resetFields();
   inputPlayerEvent(newPlayerBook);
